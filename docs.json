@@ -11,51 +11,268 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Foundations",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "foundations/introduction",
-              "foundations/tokens"
-            ]
-          },
-          {
-            "group": "Design Tokens",
-            "pages": [
-              "foundations/colors",
-              "foundations/typography",
-              "foundations/spacing"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Components",
+        "tab": "Documentation",
         "groups": [
           {
             "group": "Getting Started",
             "pages": [
-              "components/introduction"
-            ]
-          },
-          {
-            "group": "Core Components",
-            "pages": [
-              "components/buttons",
-              "components/cards",
-              "components/inputs"
+              "documentation/introduction",
+              "documentation/installation",
+              "documentation/theming",
+              "documentation/dark-mode",
+              "documentation/typography",
+              "documentation/cli",
+              "documentation/icons",
+              "documentation/integrations"
             ]
           }
         ]
       },
       {
-        "tab": "Agentic Workflows",
+        "tab": "Resources",
         "groups": [
           {
-            "group": "Agents",
+            "group": "Design Assets",
             "pages": [
-              "mavka-designer"
+              "resources/figma-files",
+              "resources/icons",
+              "resources/file-icons",
+              "resources/flag-icons",
+              "resources/avatars",
+              "resources/logos"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Base Components",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "base-components/overview"
+            ]
+          },
+          {
+            "group": "Icons & Visuals",
+            "pages": [
+              "base-components/featured-icons",
+              "base-components/illustrations"
+            ]
+          },
+          {
+            "group": "Buttons",
+            "pages": [
+              "base-components/buttons",
+              "base-components/social-buttons",
+              "base-components/mobile-app-store-buttons",
+              "base-components/utility-buttons",
+              "base-components/button-groups"
+            ]
+          },
+          {
+            "group": "Indicators & Labels",
+            "pages": [
+              "base-components/badges",
+              "base-components/badge-groups",
+              "base-components/tags"
+            ]
+          },
+          {
+            "group": "Form Controls",
+            "pages": [
+              "base-components/dropdowns",
+              "base-components/select",
+              "base-components/inputs",
+              "base-components/textarea",
+              "base-components/verification-code-inputs",
+              "base-components/text-editors",
+              "base-components/toggles",
+              "base-components/checkboxes",
+              "base-components/radio-buttons",
+              "base-components/radio-groups"
+            ]
+          },
+          {
+            "group": "Display & Feedback",
+            "pages": [
+              "base-components/avatars",
+              "base-components/tooltips",
+              "base-components/progress-indicators",
+              "base-components/sliders",
+              "base-components/video-players",
+              "base-components/credit-cards",
+              "base-components/qr-codes"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Application UI Components",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "app-ui-components/overview"
+            ]
+          },
+          {
+            "group": "Headers & Navigation",
+            "pages": [
+              "app-ui-components/page-headers",
+              "app-ui-components/card-headers",
+              "app-ui-components/section-headers",
+              "app-ui-components/section-footers",
+              "app-ui-components/sidebar-navigations",
+              "app-ui-components/header-navigations",
+              "app-ui-components/breadcrumbs",
+              "app-ui-components/tabs"
+            ]
+          },
+          {
+            "group": "Overlays & Menus",
+            "pages": [
+              "app-ui-components/modals",
+              "app-ui-components/command-menus",
+              "app-ui-components/slideout-menus"
+            ]
+          },
+          {
+            "group": "Data Visualization",
+            "pages": [
+              "app-ui-components/line-bar-charts",
+              "app-ui-components/activity-gauges",
+              "app-ui-components/pie-charts",
+              "app-ui-components/radar-charts",
+              "app-ui-components/metrics"
+            ]
+          },
+          {
+            "group": "Content & Layout",
+            "pages": [
+              "app-ui-components/tables",
+              "app-ui-components/carousels",
+              "app-ui-components/paginations",
+              "app-ui-components/progress-steps",
+              "app-ui-components/activity-feeds",
+              "app-ui-components/messaging",
+              "app-ui-components/inline-ctas",
+              "app-ui-components/content-dividers",
+              "app-ui-components/code-snippets"
+            ]
+          },
+          {
+            "group": "Feedback & Status",
+            "pages": [
+              "app-ui-components/alerts",
+              "app-ui-components/notifications",
+              "app-ui-components/loading-indicators",
+              "app-ui-components/empty-states"
+            ]
+          },
+          {
+            "group": "Inputs & Pickers",
+            "pages": [
+              "app-ui-components/date-pickers",
+              "app-ui-components/calendars",
+              "app-ui-components/file-uploaders"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Application UI Examples",
+        "groups": [
+          {
+            "group": "Examples",
+            "pages": [
+              "app-ui-examples/overview",
+              "app-ui-examples/dashboards-01",
+              "app-ui-examples/dashboards-02",
+              "app-ui-examples/settings-pages-01",
+              "app-ui-examples/settings-pages-02",
+              "app-ui-examples/informational-pages-01",
+              "app-ui-examples/informational-pages-02"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Shared Page Examples",
+        "groups": [
+          {
+            "group": "Pages",
+            "pages": [
+              "shared-page-examples/overview",
+              "shared-page-examples/log-in-pages",
+              "shared-page-examples/sign-up-pages",
+              "shared-page-examples/verification-pages",
+              "shared-page-examples/forgot-password-pages",
+              "shared-page-examples/404-pages",
+              "shared-page-examples/email-templates"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Marketing Components",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "marketing-components/overview"
+            ]
+          },
+          {
+            "group": "Navigation & Layout",
+            "pages": [
+              "marketing-components/header-navigations",
+              "marketing-components/header-sections",
+              "marketing-components/footers",
+              "marketing-components/banners"
+            ]
+          },
+          {
+            "group": "Content Sections",
+            "pages": [
+              "marketing-components/features-sections",
+              "marketing-components/pricing-sections",
+              "marketing-components/cta-sections",
+              "marketing-components/metrics-sections",
+              "marketing-components/newsletter-cta-sections",
+              "marketing-components/testimonial-sections",
+              "marketing-components/social-proof-sections"
+            ]
+          },
+          {
+            "group": "Information Sections",
+            "pages": [
+              "marketing-components/blog-sections",
+              "marketing-components/content-rich-text-sections",
+              "marketing-components/contact-sections",
+              "marketing-components/team-sections",
+              "marketing-components/careers-sections",
+              "marketing-components/faq-sections"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Marketing Examples",
+        "groups": [
+          {
+            "group": "Pages",
+            "pages": [
+              "marketing-examples/overview",
+              "marketing-examples/landing-pages",
+              "marketing-examples/pricing-pages",
+              "marketing-examples/blogs",
+              "marketing-examples/blog-posts",
+              "marketing-examples/about-pages",
+              "marketing-examples/contact-pages",
+              "marketing-examples/team-pages",
+              "marketing-examples/legal-pages",
+              "marketing-examples/faq-pages"
             ]
           }
         ]
