@@ -1,0 +1,45 @@
+---
+title: Cards
+description: "Versatile containers for grouping and organizing content."
+---
+
+# Cards
+
+Cards are the primary structural element for organizing content into distinct, readable blocks.
+
+## Basic Usage
+
+A card typically consists of a container with a subtle shadow and rounded corners.
+
+```tsx
+<Card title="Hello World" icon="hand-wave">
+  This is a simple Mavka card.
+</Card>
+```
+
+## Styles & Elevations
+
+Mavka cards use elevations to create depth.
+
+| elevation | Shadow Style | Usage |
+| :--- | :--- | :--- |
+| **Flat** | `none` | Background sections, subtle grouping |
+| **Raised** | `0 4px 6px -1px rgb(0 0 0 / 0.1)` | Default state for most components |
+| **Overlay** | `0 20px 25px -5px rgb(0 0 0 / 0.1)` | Modals, active tooltips |
+
+## Card Groups
+
+Use `<CardGroup>` to create responsive grids of cards.
+
+```tsx
+<CardGroup cols={2}>
+  <Card title="Feature One" icon="bolt" />
+  <Card title="Feature Two" icon="sparkles" />
+</CardGroup>
+```
+
+## Best Practices
+
+- **Avoid Clutter**: Keep the content inside a card focused on a single topic.
+- **Icon Usage**: Use consistent SF Symbols or Mintlify-supported icons to provide visual cues.
+- **Spacing**: Ensure equal padding inside the card for a balanced look.

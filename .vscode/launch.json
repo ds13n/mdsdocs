@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Mintlify: Debug Dev",
+      "type": "node",
+      "request": "launch",
+      "program": "node_modules/mintlify/index.js",
+      "args": ["dev"],
+      "env": {
+        "NPM_CONFIG_CACHE": "/tmp/npm_cache",
+        "HOME": "/tmp/fake_home"
+      },
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["node@22"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

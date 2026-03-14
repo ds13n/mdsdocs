@@ -1,0 +1,9 @@
+{
+  "name": "mdsdocs",
+  "version": "1.0.0",
+  "description": "Mintlify documentation",
+  "main": "index.js",
+  "dependencies": {
+    "mintlify": "latest"
+  }
+}

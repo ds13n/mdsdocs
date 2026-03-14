@@ -1,0 +1,54 @@
+---
+title: Inputs
+description: "Form elements for collecting user data and preferences."
+---
+
+# Inputs
+
+Inputs are used to collect data from users in a structured format.
+
+## Text Inputs
+
+The standard text field for strings and numbers.
+
+```tsx
+<Input label="Email Address" placeholder="you@example.com" />
+```
+
+- **Border**: Gray 200
+- **Focus Ring**: Emerald 500
+- **Corner Radius**: 8px
+
+## Selects
+
+Used for choosing an option from a predefined list.
+
+```tsx
+<Select label="Choose a Category">
+  <Option value="ai">Artificial Intelligence</Option>
+  <Option value="ux">User Experience</Option>
+</Select>
+```
+
+## Toggles & Checkboxes
+
+Used for binary choices and settings.
+
+```tsx
+<Toggle label="Enable Notifications" defaultChecked />
+```
+
+## Design States
+
+Inputs have distinct visual states to guide the user:
+
+- **Default**: Gray 200 border, placeholder text.
+- **Focus**: Emerald 500 border with a subtle outer ring.
+- **Error**: Rose 500 border with an error message below.
+- **Disabled**: Gray 100 background and text.
+
+## Best Practices
+
+- **Always Use Labels**: Never rely on placeholders alone for context.
+- **Validation**: Provide real-time feedback when possible.
+- **Grouping**: Group related inputs logically using sections or fieldsets.
