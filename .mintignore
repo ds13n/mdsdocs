@@ -5,3 +5,10 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Agents and subagents
+AGENTS.md
+.agents/
+.agent/
+_agents/
+_agent/
