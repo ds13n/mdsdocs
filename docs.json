@@ -19,6 +19,14 @@
               "foundations/introduction",
               "foundations/tokens"
             ]
+          },
+          {
+            "group": "Design Tokens",
+            "pages": [
+              "foundations/colors",
+              "foundations/typography",
+              "foundations/spacing"
+            ]
           }
         ]
       },
@@ -26,11 +34,17 @@
         "tab": "Components",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "components/introduction"
+            ]
+          },
+          {
+            "group": "Core Components",
+            "pages": [
+              "components/buttons",
+              "components/cards",
+              "components/inputs"
             ]
           }
         ]
@@ -42,17 +56,6 @@
             "group": "Agents",
             "pages": [
               "mavka-designer"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
             ]
           }
         ]

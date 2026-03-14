@@ -1,0 +1,55 @@
+---
+title: Buttons
+description: "Primary, secondary, and ghost buttons for user actions."
+---
+
+# Buttons
+
+Buttons allow users to take actions and make choices with a single tap.
+
+## Variants
+
+Mavka provides three main button variants to establish clear action hierarchy.
+
+### Primary Button
+
+Used for the most important action on a page.
+
+```tsx
+<Button variant="primary">Click Me</Button>
+```
+
+- **Background**: Emerald 500
+- **Text**: White
+- **Corner Radius**: 8px
+
+### Secondary Button
+
+Used for secondary actions that support the primary goal.
+
+```tsx
+<Button variant="secondary">Learn More</Button>
+```
+
+- **Background**: Gray 100
+- **Text**: Gray 900
+- **Border**: Gray 200
+
+### Ghost Button
+
+Used for low-emphasis actions or within tight spaces.
+
+```tsx
+<Button variant="ghost">Cancel</Button>
+```
+
+- **Background**: Transparent
+- **Text**: Emerald 600
+
+## Interactive States
+
+Buttons include subtle micro-animations for interactive feedback:
+
+- **Hover**: Scale up by 2% and subtly brighten the background.
+- **Active (Pressed)**: Scale down by 2% and darken the background.
+- **Disabled**: Desaturate and reduce opacity to 50%.

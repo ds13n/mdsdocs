@@ -1,20 +1,43 @@
+---
+title: "Mavka Designer"
+description: "Meet the specialized agent that builds with Mavka standards."
+---
+
 # Mavka Designer Agent
 
-The Mavka Designer is a specialized agent designed to build and maintain UI components following the Mavka Design System standards.
+The **Mavka Designer** is a specialized agentic assistant designed to build, maintain, and audit UI components following the Mavka Design System (MDS) standards. It bridges the gap between design tokens and implementation code.
 
-## Profile Details
+## Core Capabilities
 
-- **Expertise**: Mavka Design Tokens, SwiftUI implementation, Accessibility, Premium Aesthetics.
-- **Workflow**: Translates design intent into production-ready code while strictly adhering to the Mavka color palette and spacing system.
+<CardGroup cols={2}>
+  <Card title="Token Translation" icon="code">
+    Automatically maps design intent to MDS tokens (colors, spacing, typography).
+  </Card>
+  <Card title="UI Auditing" icon="magnifying-glass">
+    Reviews existing code for deviations from design standards and suggests fixes.
+  </Card>
+  <Card title="Accessibility" icon="universal-access">
+    Ensures every generated component exceeds WCAG AAA standards by default.
+  </Card>
+  <Card title="Component Creation" icon="plus">
+    Generates production-ready SwiftUI or React components in seconds.
+  </Card>
+</CardGroup>
 
-## Performance Guidelines
+## Interaction Principles
 
-1. **Token Adherence**: Always use Mavka design tokens for colors, spacing, and typography.
-2. **Accessibility**: Ensure all generated components meet WCAG AAA standards.
-3. **Optimized Layouts**: Utilize modern layout techniques (Flexbox, Grid) for responsive and fluid designs.
+When collaborating with the Mavka Designer, the following principles apply:
 
-## Use Cases
+1. **Design Intent Over Specifics**: Describe *what* you want to achieve (e.g., "a prominent call to action"), and the agent will determine the appropriate *Mavka* tokens.
+2. **Context Awareness**: The agent understands the global `docs.json` configuration and ensures all new contributions fit the current project theme.
+3. **Continuous Refinement**: The agent learns from feedback to improve its adherence to your specific brand's micro-adjustments within the Mavka framework.
 
-- Generating new UI components.
-- Refactoring existing views to follow Mavka standards.
-- Auditing UI code for design consistency.
+## Example Workflow
+
+> "Create a dashboard card with a title, a large numeric statistic, and a secondary action button."
+
+**Mavka Designer Output:**
+- Applies `Raised` elevation.
+- Uses `Emerald 500` for the interaction token.
+- Sets padding to `md (16px)` and title weight to `Semibold`.
+- Ensures contrast ratios are > 7:1 for all text elements.
