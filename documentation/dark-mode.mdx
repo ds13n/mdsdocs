@@ -5,8 +5,63 @@ description: "Implement and configure dark mode support across all Mavka compone
 
 # Dark Mode
 
-Implement and configure dark mode support across all Mavka components.
+Easily swap between light and dark modes with CSS variables.
 
-<Info>
-  This page is a placeholder. Content will be added in future updates.
-</Info>
+## Dark mode support
+
+Mavka components come with native dark mode support out-of-the-box, so there’s no need for separate styles.
+
+```html
+<p className="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-50">Hello, world!</p> 
+<p className="bg-primary text-primary">Hello, world!</p> 
+```
+
+Dark mode styles are managed via design tokens and CSS variables, not hardcoded in components. This keeps your styles consistent and easy to maintain.
+
+## How to switch to dark mode
+
+Toggle appearance between light and dark modes simply by adding the `dark-mode` class to any element. This flexible approach lets you mix and match light and dark components within the same container or page.
+
+### Example
+
+```tsx
+<div className="light-mode bg-secondary">
+    {/* Light mode components */}
+</div>
+<div className="dark-mode bg-secondary">
+    {/* Dark mode components */}
+    <FeaturedCardEventCTA
+        title="Join our workshop"
+        badge="Live"
+        description="Learn how to leverage ChatGPT to supercharge your workflow."
+        confirmLabel="Join now!"
+    />
+</div>
+```
+
+If you're looking for building a dark mode toggle in either a Next.js or Vite project, please check out the theme toggle example in our [Next.js integration](/documentation/integrations) or [Vite integration](/documentation/integrations) guides.
+
+---
+
+## FAQs
+
+### How do I enable dark mode globally?
+To enable dark mode for your entire application, add the `dark-mode` class to your root HTML or body element. This will apply dark mode styles to all components within that container.
+
+### Can I mix light and dark modes?
+Yes! You can selectively apply the `dark-mode` or `light-mode` class to specific containers to mix and match component appearances on the same page. This gives you fine-grained control over theming.
+
+### How do I implement a toggle?
+You can implement a dark mode toggle by adding or removing the `dark-mode` class from your root element using JavaScript. You might want to store the user's preference in `localStorage` to persist it across page loads.
+
+### Does it support Next.js?
+If you're using Next.js, you can use the `useTheme` hook from `next-themes` to toggle the dark mode.
+
+### Do I need separate styles for dark mode?
+No, Mavka handles dark mode through CSS variables, so you don't need to write separate styles. Just use the semantic color classes (like `bg-primary` instead of `bg-gray-50`) and the dark mode styles will be applied automatically.
+
+### What is the performance impact?
+Mavka's implementation of dark mode has minimal impact on performance since it uses CSS variables rather than duplicating styles. The theme switching is instantaneous.
+
+### How do I customize dark mode colors?
+You can customize dark mode colors by modifying the CSS variables in your theme file. Each color token has both light and dark variants defined in the `:root` and `.dark-mode` selectors.

@@ -5,8 +5,73 @@ description: "Learn how to customize and extend the Mavka theme to match your br
 
 # Theming
 
-Learn how to customize and extend the Mavka theme to match your brand identity.
+Learn how to customize our components effortlessly to make them your own.
 
-<Info>
-  This page is a placeholder. Content will be added in future updates.
-</Info>
+## Via CLI upon project creation
+
+When initializing a new project using the **Mavka CLI** tool, you'll be asked to choose a color palette from our already defined set:
+
+```text
+? Which color would you like to use as the brand color?
+❯   brand
+    error
+    warning
+    success
+    gray
+    moss
+    green
+    teal
+  ↓ blue
+```
+
+## Manually
+
+If you've already created a Mavka project and would like to change the brand color to something else, you can just duplicate one of the pre-defined color palettes and rename it to `--color-brand-*` in your `theme.css` file:
+
+```css theme.css
+@theme {
+    /* Current brand colors */
+    --color-brand-25: rgb(252 250 255); 
+    --color-brand-50: rgb(249 245 255); 
+    --color-brand-100: rgb(244 235 255); 
+    --color-brand-200: rgb(233 215 254); 
+    --color-brand-300: rgb(214 187 251); 
+    --color-brand-400: rgb(182 146 246); 
+    --color-brand-500: rgb(158 119 237); 
+    --color-brand-600: rgb(127 86 217); 
+    --color-brand-700: rgb(105 65 198); 
+    --color-brand-800: rgb(83 56 158); 
+    --color-brand-900: rgb(66 48 125); 
+    --color-brand-950: rgb(44 28 95); 
+
+    /* Replace with your new palette (e.g., rose) */
+    --color-brand-25: var(--color-rose-25); 
+    --color-brand-50: var(--color-rose-50); 
+    --color-brand-100: var(--color-rose-100); 
+    --color-brand-200: var(--color-rose-200); 
+    --color-brand-300: var(--color-rose-300); 
+    --color-brand-400: var(--color-rose-400); 
+    --color-brand-500: var(--color-rose-500); 
+    --color-brand-600: var(--color-rose-600); 
+    --color-brand-700: var(--color-rose-700); 
+    --color-brand-800: var(--color-rose-800); 
+    --color-brand-900: var(--color-rose-900); 
+    --color-brand-950: var(--color-rose-950); 
+}
+```
+
+---
+
+## FAQs
+
+### Can I define a completely custom palette?
+Yes, you can define your own custom color palette by modifying the CSS variables in your theme file. Just make sure to define all the necessary color shades (from 25 to 950) for a consistent look.
+
+### Do I need to restart my development server?
+In most cases, you don't need to restart. The changes should be applied automatically when you save the CSS file.
+
+### Does this affect dark mode?
+Yes, our theming system is designed to work seamlessly with dark mode. When you change the theme colors, both light and dark mode will be updated appropriately.
+
+### Can I use multiple themes?
+Yes, you can create multiple theme files and apply them to different parts of your application using CSS scoping techniques.

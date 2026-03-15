@@ -1,12 +1,216 @@
 ---
 title: "Installation"
-description: "Step-by-step guide to installing the Mavka Design System in your project."
+description: "Step-by-step guide to installing Mavka in your project."
 ---
 
 # Installation
 
-Step-by-step guide to installing the Mavka Design System in your project.
+This guide will help you install Mavka and get set up quickly.
 
-<Info>
-  This page is a placeholder. Content will be added in future updates.
-</Info>
+## Frameworks
+
+Get up and running with our straightforward setup guides and official starter kits:
+
+<CardGroup cols={3}>
+  <Card title="Next.js" icon="react" href="https://nextjs.org">
+    Click to open Next.js starter kit.
+  </Card>
+  <Card title="Vite" icon="bolt" href="https://vitejs.dev">
+    Click to open Vite starter kit.
+  </Card>
+  <Card title="Bolt" icon="bolt" href="https://bolt.new">
+    Click to open Bolt starter kit.
+  </Card>
+  <Card title="Claude" icon="sparkles" href="https://claude.ai">
+    Click to open Claude starter kit.
+  </Card>
+  <Card title="v0" icon="v" href="https://v0.dev">
+    Click to open v0 starter kit.
+  </Card>
+  <Card title="Lovable" icon="heart" href="https://lovable.dev">
+    Click to open Lovable starter kit.
+  </Card>
+</CardGroup>
+
+## Installation via CLI
+
+If you're starting a new project, simply use our CLI to scaffold a new Mavka project with pre-installed components and configurations:
+
+### 1. Create a new project
+
+Run this command in your root folder to create a new project (Next.js or Vite):
+
+```bash
+npx mavka@latest init --nextjs
+```
+
+While running the command, you'll be asked a few questions to set up your project:
+
+```text
+? What is your project named? › mavka-app
+? Which color would you like to use as the brand color? ›
+❯   brand
+    error
+    warning
+    success
+  ↓ gray-neutral
+```
+
+This will create a new project in the `mavka-app` directory with all the necessary configurations and components pre-installed.
+
+### 2. Ready to go!
+
+Great! You're all set to start using Mavka components. If something is missing, you can copy/paste what you need into your project directly from individual components pages.
+
+---
+
+## Manual installation
+
+Before going further, make sure you have a project with Tailwind CSS set up.
+
+### 1. Install packages
+
+Install the required packages with your favorite package manager:
+
+<CodeGroup>
+```bash npm
+npm install @mavka/icons react-aria-components tailwindcss-react-aria-components tailwind-merge tailwindcss-animate
+```
+
+```bash yarn
+yarn add @mavka/icons react-aria-components tailwindcss-react-aria-components tailwind-merge tailwindcss-animate
+```
+
+```bash bun
+bun add @mavka/icons react-aria-components tailwindcss-react-aria-components tailwind-merge tailwindcss-animate
+```
+</CodeGroup>
+
+### 2. Create a custom Tailwind CSS configuration
+
+Create a `theme.css` file in your styles directory and add the following code:
+
+```css theme.css
+@theme {
+    /* FONT FAMILY */
+    --font-body: var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-display: var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-mono: ui-monospace, "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+ 
+    /* FONT SIZE */
+    --text-xs: calc(var(--spacing) * 3);
+    --text-xs--line-height: calc(var(--spacing) * 4.5);
+ 
+    --text-sm: calc(var(--spacing) * 3.5);
+    --text-sm--line-height: calc(var(--spacing) * 5);
+ 
+    --text-md: calc(var(--spacing) * 4);
+    --text-md--line-height: calc(var(--spacing) * 6);
+ 
+    --text-lg: calc(var(--spacing) * 4.5);
+    --text-lg--line-height: calc(var(--spacing) * 7);
+ 
+    --text-xl: calc(var(--spacing) * 5);
+    --text-xl--line-height: calc(var(--spacing) * 7.5);
+ 
+    --text-display-xs: calc(var(--spacing) * 6);
+    --text-display-xs--line-height: calc(var(--spacing) * 8);
+ 
+    --text-display-sm: calc(var(--spacing) * 7.5);
+    --text-display-sm--line-height: calc(var(--spacing) * 9.5);
+ 
+    --text-display-md: calc(var(--spacing) * 9);
+    --text-display-md--line-height: calc(var(--spacing) * 11);
+    --text-display-md--letter-spacing: -0.72px;
+ 
+    --text-display-lg: calc(var(--spacing) * 12);
+    --text-display-lg--line-height: calc(var(--spacing) * 15);
+    --text-display-lg--letter-spacing: -0.96px;
+ 
+    --text-display-xl: calc(var(--spacing) * 15);
+    --text-display-xl--line-height: calc(var(--spacing) * 18);
+    --text-display-xl--letter-spacing: -1.2px;
+ 
+    --text-display-2xl: calc(var(--spacing) * 18);
+    --text-display-2xl--line-height: calc(var(--spacing) * 22.5);
+    --text-display-2xl--letter-spacing: -1.44px;
+ 
+    /* MAX WIDTH */
+    --max-width-container: 1280px;
+ 
+    /* BREAKPOINTS */
+    --breakpoint-xxs: 320px;
+    --breakpoint-xs: 600px;
+ 
+    /* RADIUS */
+    --radius-none: 0px;
+    --radius-xs: 0.125rem;
+    --radius-sm: 0.25rem;
+    --radius-DEFAULT: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --radius-full: 9999px;
+ 
+    /* SHADOW */
+    --shadow-xs: 0px 1px 2px rgba(10, 13, 18, 0.05);
+    --shadow-sm: 0px 1px 3px rgba(10, 13, 18, 0.1), 0px 1px 2px -1px rgba(10, 13, 18, 0.1);
+    --shadow-md: 0px 4px 6px -1px rgba(10, 13, 18, 0.1), 0px 2px 4px -2px rgba(10, 13, 18, 0.06);
+    --shadow-lg: 0px 12px 16px -4px rgba(10, 13, 18, 0.08), 0px 4px 6px -2px rgba(10, 13, 18, 0.03), 0px 2px 2px -1px rgba(10, 13, 18, 0.04);
+    --shadow-xl: 0px 20px 24px -4px rgba(10, 13, 18, 0.08), 0px 8px 8px -4px rgba(10, 13, 18, 0.03), 0px 3px 3px -1.5px rgba(10, 13, 18, 0.04);
+    --shadow-2xl: 0px 24px 48px -12px rgba(10, 13, 18, 0.18), 0px 4px 4px -2px rgba(10, 13, 18, 0.04);
+    --shadow-3xl: 0px 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
+ 
+    /* COLORS */
+    --color-white: rgb(255 255 255);
+    --color-black: rgb(0 0 0);
+    /* Brand color scale */
+    --color-brand-50: rgb(249 245 255);
+    --color-brand-500: rgb(158 119 237);
+    --color-brand-600: rgb(127 86 217);
+    --color-brand-700: rgb(105 65 198);
+    /* ... additional palette colors as per documentation ... */
+}
+```
+
+### 3. Extend Tailwind CSS config
+
+In your `globals.css` file, import the `theme.css` and necessary plugins:
+
+```css globals.css
+@import "tailwindcss";
+@import "./theme.css";
+ 
+@plugin "tailwindcss-animate";
+@plugin "tailwindcss-react-aria-components";
+ 
+@custom-variant dark (&:where(.dark-mode, .dark-mode *));
+```
+
+### 4. Add utility functions
+
+Create these files under `utils` and `hooks` directories to improve development experience.
+
+```typescript utils/cx.ts
+import { extendTailwindMerge } from "tailwind-merge";
+ 
+const twMerge = extendTailwindMerge({
+    extend: {
+        theme: {
+            text: ["display-xs", "display-sm", "display-md", "display-lg", "display-xl", "display-2xl"],
+        },
+    },
+});
+ 
+export const cx = twMerge;
+```
+
+## FAQs
+
+### Can I install individual components?
+Yes, you can use our CLI: `npx mavka@latest add [component-name]`.
+
+### Does it support other frameworks?
+Mavka components are built for React. However, the Tailwind tokens are framework-agnostic!

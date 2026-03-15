@@ -5,8 +5,133 @@ description: "Browse and integrate the Mavka icon set into your application."
 
 # Icons
 
-Browse and integrate the Mavka icon set into your application.
+Mavka Icons are a clean, consistent, and neutral icon library crafted for modern UI design. These icons are available as React components with instant npm access.
 
-<Info>
-  This page is a placeholder. Content will be added in future updates.
-</Info>
+## Installation
+
+To get started, install the Mavka Icons package:
+
+<CodeGroup>
+```bash npm
+npm install @mavka/icons
+```
+
+```bash yarn
+yarn add @mavka/icons
+```
+
+```bash bun
+bun add @mavka/icons
+```
+</CodeGroup>
+
+## Using Mavka Icons
+
+You can use Mavka Icons in two ways: by importing from the default import or by importing individual icon files.
+
+### Main module import (recommended)
+
+For modern build tools that support tree-shaking (e.g. Next.js, Vite), you can import icons directly from the main package:
+
+```tsx
+import { 
+  Home01, 
+  Settings01, 
+  User01, 
+  Bell01 
+} from "@mavka/icons";
+ 
+<Home01 className="size-5" />
+<Settings01 className="size-5" />
+<User01 className="size-5" />
+<Bell01 className="size-5" />
+```
+
+This method ensures that only the icons you use are included in the final bundle, keeping your bundle size small and optimized.
+
+### Individual module import
+
+If you're using a build tool that doesn't fully support tree-shaking, you can import icons directly from individual files:
+
+```tsx
+import Home01 from "@mavka/icons/Home01";
+import Settings01 from "@mavka/icons/Settings01";
+import User01 from "@mavka/icons/User01";
+import Bell01 from "@mavka/icons/Bell01";
+ 
+<Home01 className="size-5" />
+<Settings01 className="size-5" />
+<User01 className="size-5" />
+<Bell01 className="size-5" />
+```
+
+---
+
+## Styling Icons
+
+All Mavka Icons support standard SVG and React props out of the box:
+
+```tsx
+import { Home01 } from "@mavka/icons";
+ 
+<Home01 
+  className="size-6 text-brand-600" 
+  aria-hidden="true"
+  strokeWidth={1.5}
+  onClick={() => console.log("Home icon clicked")}
+/>
+```
+
+- **className** – Apply utility classes to control size, color, spacing, and more.
+- **strokeWidth** – Adjust the thickness of the icon's strokes.
+- **aria-hidden** – Set to true for decorative icons to improve accessibility.
+
+---
+
+## Mavka Icons PRO
+
+The PRO version of Mavka Icons includes 4,600+ icons across 4 styles. Choose between minimal line, modern duocolor or duotone, or solid icon styles.
+
+### 1. Create a configuration file
+
+Create a `.npmrc` file in your project root:
+
+```text
+@mavka-pro:registry=https://pkg.mavka.com
+//pkg.mavka.com/:_authToken=YOUR_TOKEN_HERE
+```
+
+### 2. Installing icons
+
+```bash
+npm install @mavka-pro/icons
+```
+
+### 3. Importing different styles
+
+```tsx
+  // Line icons (also available in the free package)
+  import { Home01, Settings01 } from "@mavka-pro/icons/line";
+ 
+  // Solid icons
+  import { Home01, Settings01 } from "@mavka-pro/icons/solid";
+ 
+  // Duocolor icons
+  import { Home01, Settings01 } from "@mavka-pro/icons/duocolor";
+ 
+  // Duotone icons
+  import { Home01, Settings01 } from "@mavka-pro/icons/duotone";
+```
+
+---
+
+## FAQs
+
+### What are Mavka Icons?
+Mavka Icons are a clean, consistent, and neutral icon library crafted specifically for modern UI design.
+
+### Is there a free version?
+Yes, the free version includes the default line style (1,100+ icons) for use in personal and commercial projects.
+
+### How do I customize icons?
+Use standard CSS utility classes for color and size, and the `strokeWidth` prop for line thickness.
