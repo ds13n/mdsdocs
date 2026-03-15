@@ -3,10 +3,853 @@ title: "Integrations"
 description: "Integrate Mavka with popular frameworks, tools, and design platforms."
 ---
 
+import { IntegrationLogo } from "@/app/_components/brand-minimal-logos";
+
 # Integrations
 
 Integrate Mavka with popular frameworks, tools, and design platforms.
 
-<Info>
-  This page is a placeholder. Content will be added in future updates.
-</Info>
+<Divider />
+
+## Next.js Integration
+
+Set up a Next.js project with Mavka in seconds. Our Next.js starter kit includes providers, routing, and everything you need to get started.
+
+### Installation
+
+The easiest way to get started with Mavka in a Next.js project is to use our CLI:
+
+<Steps>
+    <Step title="Initialize a new Next.js project with Mavka">
+        Using our CLI, you can initialize a new Next.js project with Mavka with the following command:
+
+        ```bash
+        npx mavka@latest init --nextjs
+        ```
+
+        While running the command, you'll be asked a few questions to set up your project:
+
+        ```bash
+        ? What is your project named? › mavka-app
+        ? Which color would you like to use as the brand color? ›
+        ❯   brand
+            error
+            warning
+            success
+          ↓ gray-neutral
+        ```
+
+        This will create a new Next.js project in the `mavka-app` directory with all the necessary configurations.
+    </Step>
+
+    <Step title="Run the development server">
+        Navigate to your project directory and start the development server:
+
+        ```bash
+        cd mavka-app
+        npm run dev
+        ```
+
+        Your Mavka Next.js project is now running at `http://localhost:3000`.
+    </Step>
+</Steps>
+
+### Manual Setup
+
+If you have an existing Next.js project and want to add Mavka manually, follow our [Installation guide](/documentation/installation#manual-installation).
+
+---
+
+## Vite Integration
+
+Quickly integrate Mavka into your Vite-powered React applications for a fast and modern development experience.
+
+### Installation
+
+Initialize a new Vite project with Mavka using our CLI:
+
+<Steps>
+    <Step title="Initialize a new Vite project with Mavka">
+        Run the following command to scaffold a new Vite project:
+
+        ```bash
+        npx mavka@latest init --vite
+        ```
+
+        Follow the prompts to name your project and select your brand color.
+    </Step>
+
+    <Step title="Start developing">
+        ```bash
+        cd my-mavka-vite-app
+        npm run dev
+        ```
+    </Step>
+</Steps>
+
+### Configuration
+
+Ensure your `tailwind.config.mjs` is set up to include Mavka's theme and components. Refer to the [CLI guide](/documentation/cli) for more details on how the CLI handles this automatically.
+
+---
+
+## v0 Integration
+
+<div className="not-typography mt-10! md:mt-12! rounded-[20px] bg-secondary_alt p-2 ring-1 ring-secondary ring-inset">
+    <div className="flex flex-col items-center rounded-[12px] bg-primary_alt px-5 pt-8 pb-10 text-center shadow-lg ring-1 ring-secondary_alt">
+        <IntegrationLogo brand="v0" />
+        <p className="mt-5 text-xl font-semibold text-primary">v0 integration coming soon</p>
+        <p className="mt-1.5 text-md text-tertiary">We are currently waiting for v0 to support Tailwind CSS v4.1.</p>
+    </div>
+</div>
+
+---
+
+## Claude Code Integration
+
+### Prerequisites
+
+In order to quickly kickstart your project with Mavka and Claude Code, you need to have Claude Code installed in your machine.
+
+Please refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/setup) to install it if you haven't already.
+
+<Divider />
+
+### Start using Mavka with Claude
+
+We have prepared starter kits that you can use with Claude Code so that you can get started with Mavka in seconds. First, choose your framework:
+
+<div className="not-typography grid grid-cols-1 gap-3 my-8 lg:grid-cols-2">
+    <Card icon="react" href="https://github.com/mavka-ds/mavka-nextjs-starter-kit" title="Next.js starter kit – Mavka">
+      Click to open Next.js starter kit.
+    </Card>
+    <Card icon="react" href="https://github.com/mavka-ds/mavka-vite-starter-kit" title="Vite starter kit – Mavka">
+      Click to open Vite starter kit.
+    </Card>
+</div>
+
+Then, clone the chosen starter kit in your local machine:
+
+<CodeTabs>
+  <CodeTabList items={[
+    { id: "nextjs", label: "Next.js" },
+    { id: "vite", label: "Vite" }
+  ]}/>
+  <CodeTabPanel id="nextjs">
+    ```bash
+    git clone https://github.com/mavka-ds/mavka-nextjs-starter-kit
+    ```
+  </CodeTabPanel>
+  <CodeTabPanel id="vite">
+    ```bash
+    git clone https://github.com/mavka-ds/mavka-vite-starter-kit
+    ```
+  </CodeTabPanel>
+</CodeTabs>
+
+Once you have the starter kit in your local machine, you can start using Mavka with Claude Code by just running the following command in the project directory:
+
+```bash
+claude
+```
+
+And now you should be able to freely prompt Claude Code to continue developing your project.
+
+<Divider />
+
+### CLAUDE.md instructions
+
+Our starter kits include a `CLAUDE.md` file that provides Claude Code with context about the Mavka component library. This file is automatically read by Claude Code when you start a session.
+
+If you want to add Mavka instructions to an existing project, download the `AGENT.md` file and save it as `CLAUDE.md` in your project root:
+
+```bash
+curl -o CLAUDE.md https://www.mavka.com/react/AGENT.md
+```
+
+Or download it manually: [AGENT.md](https://www.mavka.com/react/AGENT.md)
+
+<Divider />
+
+### MCP integration
+
+Looking to connect Claude Code to the Mavka component library via MCP (Model Context Protocol)? Check out our [MCP integration guide](/integrations/mcp) for setup instructions.
+
+---
+
+## Gemini Integration
+
+### Prerequisites
+
+In order to quickly kickstart your project with Mavka and Gemini, you need to have Gemini CLI installed in your machine.
+
+Please refer to the [Gemini CLI documentation](https://github.com/google-gemini/gemini-cli?tab=readme-ov-file#quickstart) to install it if you haven't already.
+
+<Divider />
+
+### Start using Mavka with Gemini
+
+We have prepared starter kits that you can use with Gemini CLI so that you can get started with Mavka in seconds. First, choose your framework:
+
+<div className="not-typography grid grid-cols-1 gap-3 my-8 lg:grid-cols-2">
+    <Card icon="react" href="https://github.com/mavka-ds/mavka-nextjs-starter-kit" title="Next.js starter kit – Mavka">
+      Click to open Next.js starter kit.
+    </Card>
+    <Card icon="react" href="https://github.com/mavka-ds/mavka-vite-starter-kit" title="Vite starter kit – Mavka">
+      Click to open Vite starter kit.
+    </Card>
+</div>
+
+Then, clone the chosen starter kit in your local machine:
+
+<CodeTabs>
+  <CodeTabList items={[
+    { id: "nextjs", label: "Next.js" },
+    { id: "vite", label: "Vite" }
+  ]}/>
+  <CodeTabPanel id="nextjs">
+    ```bash
+    git clone https://github.com/mavka-ds/mavka-nextjs-starter-kit
+    ```
+  </CodeTabPanel>
+  <CodeTabPanel id="vite">
+    ```bash
+    git clone https://github.com/mavka-ds/mavka-vite-starter-kit
+    ```
+  </CodeTabPanel>
+</CodeTabs>
+
+Once you have the starter kit in your local machine, you can start using Mavka with Gemini CLI by just running the following command in the project directory:
+
+```bash
+gemini
+```
+
+And now you should be able to freely prompt Gemini to continue developing your project.
+
+<Divider />
+
+### GEMINI.md instructions
+
+Our starter kits include a `GEMINI.md` file that provides Gemini CLI with context about the Mavka component library. This file is automatically read by Gemini CLI when you start a session.
+
+If you want to add Mavka instructions to an existing project, download the `AGENT.md` file and save it as `GEMINI.md` in your project root:
+
+```bash
+curl -o GEMINI.md https://www.mavka.com/react/AGENT.md
+```
+
+Or download it manually: [AGENT.md](https://www.mavka.com/react/AGENT.md)
+
+<Divider />
+
+### MCP integration
+
+Looking to connect Gemini CLI to the Mavka component library via MCP (Model Context Protocol)? Check out our [MCP integration guide](/integrations/mcp) for setup instructions.
+
+---
+
+## MCP (Model Context Protocol) Integration
+
+### Overview
+
+The Mavka MCP server enables AI assistants like Claude Code and Cursor to directly access our component library. Instead of copying and pasting components manually, your AI assistant can browse, search, and install components for you using natural language.
+
+### What you can do
+- Ask Claude to "add a button component to my project"
+- Request "create a dashboard layout with sidebar navigation"
+- Get complete page templates: "build a landing page with hero and pricing sections"
+- Search components: "find components for data visualization"
+
+<Divider />
+
+### Prerequisites
+
+Before integrating the MCP server, ensure you have:
+
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/setup), [Cursor](https://cursor.com), [Codex](https://developers.openai.com/codex), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or [OpenCode](https://opencode.ai) installed
+- A project initialized with the Mavka CLI (`npx mavka init`)
+- Node.js 18+ installed
+
+**Note:** Free components work without a need for authentication. For PRO components, you'll need a [Mavka PRO subscription](https://www.mavka.com/buy/react).
+
+<Divider />
+
+### How it works
+
+The MCP server helps your AI assistant discover and install components:
+
+1. **You ask** for a component or page template in natural language
+2. **AI searches** the Mavka library using MCP tools
+3. **AI receives** a CLI command to install the component
+4. **AI runs** the command in your terminal
+5. **Component is installed** with all dependencies automatically
+
+This approach saves tokens and ensures components are installed correctly with proper dependencies and file structure.
+
+<Divider />
+
+### Authentication options
+
+The Mavka MCP server supports three authentication methods:
+
+#### Option 1: OAuth (recommended)
+
+Our MCP server supports OAuth 2.1 with PKCE for secure authentication. MCP clients that support OAuth (like Claude Code) will automatically handle the login flow.
+
+```bash
+claude mcp add mavka --transport http https://www.mavka.com/react/api/mcp
+```
+
+When using OAuth:
+1. Add the MCP server without any authentication headers
+2. When you access PRO components, you'll be prompted to log in via browser
+3. After authentication, your session persists automatically
+
+This is the recommended approach as it:
+- Doesn't require managing API keys
+- Automatically refreshes your session
+- Works seamlessly with Claude Code's OAuth support
+
+#### Option 2: API key header
+
+For clients that don't support OAuth, you can use your API key directly:
+
+```bash
+claude mcp add --transport http mavka https://www.mavka.com/react/api/mcp --header "Authorization: Bearer YOUR_API_KEY"
+```
+
+Replace `YOUR_API_KEY` with your actual API key.
+
+#### Option 3: No authentication (free components only)
+
+For free components only, no authentication is required:
+
+```bash
+claude mcp add --transport http mavka https://www.mavka.com/react/api/mcp
+```
+
+<Divider />
+
+### Integration setup
+
+Choose your AI assistant below and follow the steps to connect the Mavka MCP server.
+
+<Tabs className="w-full mt-8">
+    <TabList type="underline" items={[{ id: 'claude', label: 'Claude Code' }, { id: 'cursor', label: 'Cursor' }, { id: 'codex', label: 'Codex' }, { id: 'gemini', label: 'Gemini CLI' }, { id: 'opencode', label: 'OpenCode' }]} />
+
+    <TabPanel id="claude">
+        #### Quick start
+
+        Add the Mavka MCP server:
+
+        ```bash
+        claude mcp add --transport http mavka https://www.mavka.com/react/api/mcp
+        ```
+
+        Claude Code will automatically use OAuth for PRO component access. When you first request a PRO component, you'll be prompted to authenticate via your browser.
+
+        #### With API key (alternative)
+
+        If you prefer using an API key instead of OAuth:
+
+        ```bash
+        claude mcp add --transport http mavka https://www.mavka.com/react/api/mcp --header "Authorization: Bearer YOUR_API_KEY"
+        ```
+
+        Replace `YOUR_API_KEY` with your actual API key.
+
+        #### Manual configuration
+
+        Create or edit `~/.claude.json`:
+
+        ```json
+        {
+          "mcpServers": {
+            "mavka": {
+              "type": "http",
+              "url": "https://www.mavka.com/react/api/mcp"
+            }
+          }
+        }
+        ```
+
+        With API key for PRO access (alternative to OAuth):
+
+        ```json
+        {
+          "mcpServers": {
+            "mavka": {
+              "type": "http",
+              "url": "https://www.mavka.com/react/api/mcp",
+              "headers": {
+                "Authorization": "Bearer YOUR_API_KEY"
+              }
+            }
+          }
+        }
+        ```
+
+        #### Verify connection
+
+        Check that the MCP server is connected:
+
+        ```bash
+        claude mcp list
+        ```
+
+        You can also verify inside a Claude Code session by typing `/mcp` to see the connection status of all configured servers.
+
+        #### Start using
+
+        Now you can interact with Mavka components naturally:
+
+        ```
+        "Add a button component to my project"
+        "Build a dashboard with sidebar navigation"
+        "Create a pricing page with three tiers"
+        "Add a modal to confirm deleting a user"
+        ```
+    </TabPanel>
+
+    <TabPanel id="cursor">
+        #### Quick start
+
+        Create a `.cursor/mcp.json` file in your project root:
+
+        ```json
+        {
+          "mcpServers": {
+            "mavka": {
+              "url": "https://www.mavka.com/react/api/mcp"
+            }
+          }
+        }
+        ```
+
+        #### With API key (PRO components)
+
+        For PRO access, add your API key:
+
+        ```json
+        {
+          "mcpServers": {
+            "mavka": {
+              "url": "https://www.mavka.com/react/api/mcp",
+              "headers": {
+                "Authorization": "Bearer YOUR_API_KEY"
+              }
+            }
+          }
+        }
+        ```
+
+        #### Verify connection
+
+        Restart Cursor to load the new MCP configuration. Then verify the server is connected by opening the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and running **"MCP: List Servers"**. The Mavka server should show a green connected status.
+
+        #### Start using
+
+        Open Cursor's AI chat and start asking for components:
+
+        ```
+        "Add a button component to my project"
+        "Build a dashboard with sidebar navigation"
+        "Create a pricing page with three tiers"
+        "Add a modal to confirm deleting a user"
+        ```
+    </TabPanel>
+
+    <TabPanel id="codex">
+        #### Quick start
+
+        Add the Mavka MCP server using the Codex CLI:
+
+        ```bash
+        codex mcp add mavka --transport http --url https://www.mavka.com/react/api/mcp
+        ```
+
+        For PRO component access via OAuth, run:
+
+        ```bash
+        codex mcp login mavka
+        ```
+
+        This will open your browser to authenticate. After logging in, your session persists automatically.
+
+        #### With API key (alternative)
+
+        If you prefer using an API key instead of OAuth:
+
+        ```bash
+        codex mcp add mavka --transport http --url https://www.mavka.com/react/api/mcp --header "Authorization: Bearer YOUR_API_KEY"
+        ```
+
+        #### Manual configuration
+
+        Create or edit `~/.codex/config.toml` (global) or `.codex/config.toml` (project-specific):
+
+        ```json
+        [mcp_servers.mavka]
+        url = "https://www.mavka.com/react/api/mcp"
+        ```
+
+        With API key for PRO access (alternative to OAuth):
+
+        ```json
+        [mcp_servers.mavka]
+        url = "https://www.mavka.com/react/api/mcp"
+        http_headers = { "Authorization" = "Bearer YOUR_API_KEY" }
+        ```
+
+        #### Verify connection
+
+        Restart Codex to load the new MCP configuration. Then verify inside a Codex session by typing `/mcp` to see your active MCP servers and their connection status.
+
+        #### Start using
+
+        Start a Codex session and ask for components:
+
+        ```
+        "Add a button component to my project"
+        "Build a dashboard with sidebar navigation"
+        "Create a pricing page with three tiers"
+        "Add a modal to confirm deleting a user"
+        ```
+    </TabPanel>
+
+    <TabPanel id="gemini">
+        #### Quick start (OAuth)
+
+        Create or edit `~/.gemini/settings.json` (global) or `.gemini/settings.json` (project-specific):
+
+        ```json
+        {
+          "mcpServers": {
+            "mavka": {
+              "httpUrl": "https://www.mavka.com/react/api/mcp"
+            }
+          }
+        }
+        ```
+
+        When you access PRO components, Gemini CLI will automatically handle OAuth authentication and prompt you to log in via browser.
+
+        #### With API key (alternative)
+
+        For API key authentication instead of OAuth:
+
+        ```json
+        {
+          "mcpServers": {
+            "mavka": {
+              "httpUrl": "https://www.mavka.com/react/api/mcp",
+              "headers": {
+                "Authorization": "Bearer YOUR_API_KEY"
+              }
+            }
+          }
+        }
+        ```
+
+        #### Verify connection
+
+        Restart Gemini CLI to load the new MCP configuration. Then verify inside a Gemini CLI session by typing `/mcp` to see configured servers and their connection status. You can also run `/mcp refresh` to force a reconnection.
+
+        #### Start using
+
+        Start a Gemini CLI session and ask for components:
+
+        ```
+        "Add a button component to my project"
+        "Build a dashboard with sidebar navigation"
+        "Create a pricing page with three tiers"
+        "Add a modal to confirm deleting a user"
+        ```
+    </TabPanel>
+
+    <TabPanel id="opencode">
+        #### Quick start
+
+        Add the Mavka MCP server using the OpenCode CLI:
+
+        ```bash
+        opencode mcp add
+        ```
+
+        When prompted, select **remote** as the server type and enter the URL:
+
+        ```
+        https://www.mavka.com/react/api/mcp
+        ```
+
+        OpenCode will automatically handle OAuth for PRO component access. When you first request a PRO component, you'll be prompted to authenticate via your browser.
+
+        #### Manual configuration
+
+        Create or edit `opencode.json` in your project root (or `~/.config/opencode/opencode.json` for global config):
+
+        ```json
+        {
+          "$schema": "https://opencode.ai/config.json",
+          "mcp": {
+            "mavka": {
+              "type": "remote",
+              "url": "https://www.mavka.com/react/api/mcp"
+            }
+          }
+        }
+        ```
+
+        #### With API key (alternative)
+
+        If you prefer using an API key instead of OAuth:
+
+        ```json
+        {
+          "$schema": "https://opencode.ai/config.json",
+          "mcp": {
+            "mavka": {
+              "type": "remote",
+              "url": "https://www.mavka.com/react/api/mcp",
+              "oauth": false,
+              "headers": {
+                "Authorization": "Bearer YOUR_API_KEY"
+              }
+            }
+          }
+        }
+        ```
+
+        #### Verify connection
+
+        Check that the MCP server is connected:
+
+        ```bash
+        opencode mcp list
+        ```
+
+        If you run into issues, use the debug command:
+
+        ```bash
+        opencode mcp debug mavka
+        ```
+
+        Restart OpenCode to load the new MCP configuration.
+
+        #### Start using
+
+        Start an OpenCode session and ask for components:
+
+        ```
+        "Add a button component to my project"
+        "Build a dashboard with sidebar navigation"
+        "Create a pricing page with three tiers"
+        "Add a modal to confirm deleting a user"
+        ```
+    </TabPanel>
+</Tabs>
+
+<Divider />
+
+### Available tools
+
+The MCP server provides six tools for component management:
+
+#### Search and discovery
+
+**`list_components`** - Browse components by category
+```
+"List all base components"
+"Show me marketing components"
+"What dashboard components are available?"
+```
+
+Parameters:
+- `category` - Filter by category: `base`, `application`, `marketing`, `foundations`, `shared-assets`, `examples`
+- `skip` - Number of components to skip for pagination (default: 0)
+- `limit` - Maximum number of components to return (default: 100)
+- `key` - API key for authentication
+
+The response includes `total`, `skip`, `limit`, and `has_more` fields for pagination. For example, to get the second page: `list_components({ skip: 100, limit: 100 })`.
+
+**`search_components`** - Search by functionality
+```
+"Find components for forms"
+"Search for data visualization components"
+"Show me components with navigation"
+```
+
+Parameters:
+- `query` - Search query (required)
+- `category_filter` - Optional category filter
+- `limit` - Maximum number of results (default: 20)
+- `key` - API key for authentication
+
+#### Component installation
+
+**`get_component`** - Get and install a single component
+```
+"Add the Button component to my project"
+"Install the Modal component"
+```
+
+**`get_component_bundle`** - Install multiple components at once
+```
+"Add Button, Modal, and Form components"
+"Install all components I need for a contact form"
+```
+
+#### Page templates
+
+**`get_page_templates`** - Browse available page templates (PRO only)
+```
+"Show me all landing page templates"
+"List dashboard templates with sidebar layout"
+"What marketing page templates are available?"
+```
+
+**`get_page_template_files`** - Install a complete page template (PRO only)
+```
+"Install the landing page template 01"
+"Add the dashboard template to my project"
+```
+
+<Divider />
+
+### Example workflows
+
+#### Building a dashboard
+
+```
+User: "I need to build a dashboard with sidebar navigation and a data table"
+
+AI Assistant: Let me find the right template for you.
+[Searches for dashboard templates]
+[Finds dashboards-01 with sidebar layout]
+[Runs: npx mavka@latest example dashboards-01/01 --yes]
+[Dashboard installed with all components and dependencies]
+```
+
+#### Adding components
+
+```
+User: "Add a pricing section to my landing page"
+
+AI Assistant: I'll add a pricing component for you.
+[Searches for pricing components]
+[Finds pricing-section-01]
+[Runs: npx mavka@latest add pricing-section-01 --yes]
+[Component installed with proper imports]
+```
+
+#### Component discovery
+
+```
+User: "What components do you have for handling user input?"
+
+AI Assistant: Let me search the Mavka library.
+[Searches with query "input"]
+[Lists: input, form, checkbox, radio, select, textarea, etc.]
+[Shows descriptions and access levels for each]
+```
+
+<Divider />
+
+### Free vs PRO
+
+#### Free components (no API key required)
+- Core base UI components (buttons, inputs, forms, select, etc.)
+- Core application components (date picker, table, charts, etc.)
+- Foundation components (icons, logos)
+
+#### PRO components (API key required)
+- Advanced marketing sections (hero, testimonials, pricing, CTA, etc.)
+- Application components (modals, slideout menus, command menus, etc.)
+- All page templates and examples (dashboards, landing pages, etc.)
+- Shared assets (login, signup, 404 pages, etc.)
+- All component variants
+
+With a valid API key, all components are returned. Without a key, only free components are shown. Each component in the response includes an `access` field (`"public"` or `"pro"`) so you can see what's available.
+
+<Divider />
+
+### Resources
+
+The MCP server also provides browseable resources:
+
+- `mavka://components` - Browse all components
+- `mavka://components/base` - Core UI components
+- `mavka://components/application` - Complex app components
+- `mavka://components/marketing` - Marketing sections
+- `mavka://templates` - Complete page templates
+- `mavka://examples` - Usage examples and patterns
+
+<Divider />
+
+### Troubleshooting
+
+#### MCP server not connecting
+
+1. Verify your configuration syntax
+2. Check that the URL is correct: `https://www.mavka.com/react/api/mcp`
+3. Try removing and re-adding the MCP:
+   ```bash
+   claude mcp remove mavka
+   claude mcp add --transport http mavka https://www.mavka.com/react/api/mcp
+   ```
+
+#### CLI command fails
+
+If the AI runs a CLI command that fails:
+
+1. Ensure you've initialized Mavka: `npx mavka init`
+2. Check that you're in the correct project directory
+3. Verify Node.js 18+ is installed
+
+#### PRO access denied
+
+```json
+{
+  "error": "PRO access required for this component"
+}
+```
+
+- Add your API key to the MCP configuration or use OAuth
+- Verify your API key is valid
+- Ensure your subscription includes access to React PRO components
+
+#### Component not found
+
+- Check the component name is correct (use `search_components` to find it)
+- Some components may have specific names like `hero-simple-text-01`
+
+<Divider />
+
+**Need help?** Check our [GitHub repository](https://github.com/mavka-ds/react/) for examples, or [open an issue](https://github.com/mavka-ds/react/issues/) if you run into any problems. Our community is here to help!
+
+---
+
+## Design Tools
+
+### Figma
+
+Mavka is built on a pixel-perfect Figma design system. You can find our official Figma kit to align your designs with your code.
+
+<Card title="Figma Design System" icon="figma" href="#">
+  Get the official Mavka Figma UI kit and start designing.
+</Card>
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Does Mavka support Next.js App Router?">
+    Yes, Mavka fully supports the Next.js App Router and Server Components.
+  </Accordion>
+
+  <Accordion title="Can I use Mavka with other frameworks?">
+    While we provide official support for Next.js and Vite, Mavka is compatible with any framework that supports React and Tailwind CSS.
+  </Accordion>
+</AccordionGroup>

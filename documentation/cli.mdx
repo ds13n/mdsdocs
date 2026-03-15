@@ -5,8 +5,185 @@ description: "Use the Mavka CLI to scaffold components, generate tokens, and aut
 
 # CLI
 
-Use the Mavka CLI to scaffold components, generate tokens, and automate workflows.
+The Mavka CLI tool helps you quickly scaffold projects and add components to your existing projects. This guide will help you understand how to use the CLI effectively.
 
-<Info>
-  This page is a placeholder. Content will be added in future updates.
-</Info>
+## Installation
+
+The `mavka` CLI tool is available directly as a command-line utility and doesn't require any installation. You can run it using either `npx` or `bunx`:
+
+<CodeGroup>
+```bash npx
+npx mavka@latest [command]
+```
+
+```bash bunx
+bunx mavka@latest [command]
+```
+</CodeGroup>
+
+## Init command
+
+The `init` command helps you scaffold a new project with Mavka components and configurations pre-installed.
+
+### 1. Create a new project
+
+Run this command in your root folder to create a new project:
+
+<CodeGroup>
+```bash Next.js
+npx mavka@latest init --nextjs
+```
+
+```bash Vite
+npx mavka@latest init --vite
+```
+</CodeGroup>
+
+While running the command, you'll be asked a few questions to set up your project:
+
+```text
+? What is your project named? › mavka-app
+? Which color would you like to use as the brand color? ›
+❯   brand
+    error
+    warning
+    success
+  ↓ gray-neutral
+```
+
+This will create a new project in the `mavka-app` directory with all the necessary configurations and components pre-installed.
+
+### 2. Ready to go!
+
+Great! You're all set to start using Mavka components.
+
+### Command options
+
+| Option | Description |
+| :--- | :--- |
+| `--nextjs` | Initialize a Next.js project |
+| `--vite` | Initialize a Vite project |
+| `-c, --color <color-name>` | Specify a brand color for the project |
+| `-o, --overwrite` | Overwrite existing files |
+| `--colors-list` | Show the available colors list |
+
+---
+
+## Add command
+
+The `add` command allows you to add specific Mavka components to your existing project.
+
+### 1. Add components
+
+To add a specific component:
+
+```bash
+npx mavka@latest add button
+```
+
+You can add multiple components at once:
+
+```bash
+npx mavka@latest add button toggle avatar
+```
+
+If you run the command without specifying any components, you'll first be asked to select a component type:
+
+```bash
+npx mavka@latest add
+```
+
+### 2. PRO components
+
+For PRO components, you need to be authenticated:
+
+```bash
+npx mavka@latest login
+npx mavka@latest add pro-component
+```
+
+### 3. Customization options
+
+The `add` command offers several options:
+
+```bash
+# Specify where to add components
+npx mavka@latest add button --path src/components
+ 
+# Specify project directory
+npx mavka@latest add button --dir ./my-project
+ 
+# Overwrite existing files
+npx mavka@latest add button --overwrite
+ 
+# Non-interactive mode (for AI agents/CI)
+npx mavka@latest add button --yes
+```
+
+### Command options
+
+| Option | Description |
+| :--- | :--- |
+| `-a, --all` | Add all available components |
+| `-o, --overwrite` | Overwrite existing files |
+| `-p, --path <path>` | The path to add the component to |
+| `-d, --dir <directory>` | The directory where the project is located |
+| `-t, --type <type>` | The type of the component to add |
+| `-y, --yes` | Non-interactive mode - use defaults |
+
+---
+
+## Login command
+
+The login command allows you to authenticate with your Mavka account to access PRO components.
+
+```bash
+npx mavka@latest login
+```
+
+Once authenticated, your credentials are saved locally and will persist across CLI sessions.
+
+---
+
+## Example command
+
+The `example` command allows you to add complete example pages to your project.
+
+### 1. Interactive example selection
+
+To browse and add an example interactively:
+
+```bash
+npx mavka@latest example
+```
+
+### 2. PRO examples
+
+Many examples require PRO access. If you try to access a PRO example without authentication, you'll be prompted to log in.
+
+```bash
+npx mavka@latest login
+npx mavka@latest example dashboard-01
+```
+
+### Command options
+
+| Option | Description |
+| :--- | :--- |
+| `-o, --overwrite` | Overwrite existing files |
+| `-p, --path <path>` | The path to add the components to |
+| `-e, --example-path <path>` | The path to add the example file to |
+| `-y, --yes` | Non-interactive mode |
+
+---
+
+## FAQs
+
+### How do I access PRO components?
+You can access PRO components (if you have an active subscription) by authenticating with the `npx mavka@latest login` command.
+
+### Can I use the CLI with an existing project?
+Yes, you can use the `add` command to add Mavka components to any existing React project with Tailwind CSS.
+
+### What frameworks are supported?
+Currently, the CLI officially supports Next.js and Vite projects.
