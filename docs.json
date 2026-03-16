@@ -75,7 +75,8 @@
             "pages": [
               "base-components/badges",
               "base-components/badge-groups",
-              "base-components/tags"
+              "base-components/tags",
+              "base-components/rating-badge-and-stars"
             ]
           },
           {
@@ -281,9 +282,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Storybook",
+          "href": "https://storybook.mavka.agency/?path=/story/base-components-buttons--primary",
           "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Figma",
+          "href": "https://www.figma.com/design/LBQd6WF75IDv78TZYrMvgJ/%E2%9C%A6-PREVIEW-%E2%9C%A6--Mavka-BETA--1.1-?t=Yb2n77LbrPnLiAak-0",
+          "icon": "figma"
+        },
+        {
+          "anchor": "Support",
+          "href": "mailto:mavka.agcy@gmail.com",
+          "icon": "envelope"
         }
       ]
     }
@@ -296,13 +307,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mavka.design"
+        "href": "mailto:mavka.agcy@gmail.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mavka.design"
+      "label": "Get PRO",
+      "href": "https://system.mavka.agency/"
     }
   },
   "contextual": {
