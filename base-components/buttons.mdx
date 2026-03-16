@@ -1,55 +1,293 @@
 ---
-title: Buttons
-description: "Primary, secondary, and ghost buttons for user actions."
+title: "Button"
+description: "High-performance, accessible React button components built for modern applications and websites. These buttons are built using React Aria and styled with Tailwind CSS."
 ---
 
-# Buttons
+# Button components
 
-Buttons allow users to take actions and make choices with a single tap.
+<div className="flex gap-4">
+  <a href="#" className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">GitHub</a>
+  <a href="https://react-spectrum.adobe.com/react-aria/" className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">React Aria</a>
+</div>
 
-## Variants
+High-performance, accessible React button components built for modern applications and websites. These buttons are built using React Aria and styled with Tailwind CSS.
 
-Mavka provides three main button variants to establish clear action hierarchy.
+## Example
 
-### Primary Button
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--primary&viewMode=story" 
+    width="100%" 
+    height="300px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
 
-Used for the most important action on a page.
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--primary&viewMode=story" 
+    width="100%" 
+    height="300px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
 
-```tsx
-<Button variant="primary">Click Me</Button>
+## Installation
+
+You can add this button component using our CLI or manually:
+
+<CodeGroup>
+```bash CLI
+npx mavka@latest add button
 ```
 
-- **Background**: Emerald 500
-- **Text**: White
-- **Corner Radius**: 8px
-
-### Secondary Button
-
-Used for secondary actions that support the primary goal.
-
-```tsx
-<Button variant="secondary">Learn More</Button>
+```bash Manual
+# Manual installation steps
 ```
+</CodeGroup>
 
-- **Background**: Gray 100
-- **Text**: Gray 900
-- **Border**: Gray 200
+## Variations
 
-### Ghost Button
+Below are the different styles and states available for the Button component:
 
-Used for low-emphasis actions or within tight spaces.
 
-```tsx
-<Button variant="ghost">Cancel</Button>
-```
+### Primary
 
-- **Background**: Transparent
-- **Text**: Emerald 600
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--primary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
 
-## Interactive States
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--primary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
 
-Buttons include subtle micro-animations for interactive feedback:
+### Secondary
 
-- **Hover**: Scale up by 2% and subtly brighten the background.
-- **Active (Pressed)**: Scale down by 2% and darken the background.
-- **Disabled**: Desaturate and reduce opacity to 50%.
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--secondary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--secondary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Tertiary
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--tertiary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--tertiary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Link gray
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--link-gray&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--link-gray&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Link color
+
+We've designed our button components to be "hybrid," meaning they can function as either a link or a standard button with ease. This offers several benefits, for example, there are many situations where you might want a link that behaves like a button, or a button that acts as a link. These two essential components work interchangeably, so it was important for us to make them easy to use.
+
+You can turn the button component into an anchor by simply passing the `href` prop. When the `href` prop is present, the button component uses the Link component from React Aria under the hood instead of Button. This means you can pass any props or attributes that an anchor tag would accept when `href` is provided.
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--link-color&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--link-color&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Destructive primary
+
+Our button component provides destructive variants that maintain the same interaction patterns as their non-destructive counterparts while applying appropriate warning colors and styling. You can use these variants just like regular buttons, and they support all the same features.
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--destructive-primary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--destructive-primary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Destructive secondary
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--destructive-secondary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--destructive-secondary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Destructive tertiary
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--destructive-tertiary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--destructive-tertiary&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Destructive link
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--destructive-link&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--destructive-link&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+### Close X
+
+<Frame className="dark:hidden">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Alight&args=&id=base-components-buttons--close-x&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+<Frame className="hidden dark:block">
+  <iframe 
+    src="https://storybook.mavka.agency/iframe.html?globals=theme%3Adark&args=&id=base-components-buttons--close-x&viewMode=story" 
+    width="100%" 
+    height="200px" 
+    className="border-none rounded-xl"
+  />
+</Frame>
+
+
+## FAQs
+
+Please refer to our frequently asked questions page for more.
+
+<AccordionGroup>
+  <Accordion title="What colors are available for buttons?">
+    Buttons support multiple color variants including `primary`, `secondary`, `tertiary`, `primary-destructive`, `secondary-destructive`, `tertiary-destructive`, `link-gray`, `link-color`, and `link-destructive`. The default color is `primary`.
+  </Accordion>
+
+  <Accordion title="What sizes are available for buttons?">
+    Buttons support four sizes: `sm` (small), `md` (medium), `lg` (large), and `xl` (extra large). You can set the size using the `size` prop, with `sm` being the default size.
+  </Accordion>
+
+  <Accordion title="Can I use custom icons with buttons?">
+    Yes, you can add icons using the `iconLeading` or `iconTrailing` props. These props accept either React components or React elements. Icons are automatically sized and styled to match the button size.
+  </Accordion>
+
+  <Accordion title="How do I disable a button?">
+    You can disable a button by setting the `isDisabled` prop to `true`. This will apply disabled styling, prevent user interaction, and disable any associated links or actions.
+  </Accordion>
+
+  <Accordion title="Can I use buttons for navigation?">
+    Yes, you can use buttons for navigation by providing an `href` prop. When an `href` is provided, the button renders as an anchor tag while maintaining button styling.
+  </Accordion>
+
+  <Accordion title="How do I handle loading states for buttons?">
+    You can handle loading states using the `isLoading` prop. When set to `true`, the button displays a loading spinner and becomes non-interactive. Use `showTextWhileLoading` to keep the button text visible during loading.
+  </Accordion>
+
+  <Accordion title="How do I make a button take the full width of its container?">
+    You can make a button take the full width by adding the `w-full` Tailwind class to the `className` prop. The button component accepts standard HTML attributes and Tailwind classes.
+  </Accordion>
+</AccordionGroup>
